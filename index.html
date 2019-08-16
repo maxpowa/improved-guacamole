@@ -1,0 +1,17 @@
+---
+layout: default
+---
+
+<h1 class="u-text-center">Blog</h1>
+<div class="description">
+  {{ site.description }}
+</div>
+
+<div class="posts">
+  <h3>Latest Posts</h3>
+  <ul>
+    {% for post in site.posts %}
+      {% include article-preview.html post=post %}
+    {% endfor %}
+  </ul>
+</div>

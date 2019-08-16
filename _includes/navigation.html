@@ -1,0 +1,19 @@
+<header class="header">
+  <nav id="navigation">
+    <div id="self">
+      <img class="identicon" alt="me" src="http://tinygraphs.com/labs/isogrids/hexa/{{ site.name }}?theme=base&numcolors=4&size=220&fmt=svg" />
+      <span>
+        <a href="{{ site.baseurl }}/">{{ site.title }}</a>
+      </span>
+    </div>
+    {% if site.links %}
+    <ul class="nav-links">
+      {% for link in site.links %}
+      <li>
+        <a href="{{ link[1] }}">{{ link[0] }}</a>
+      </li>
+      {% endfor %}
+    </ul>
+    {% endif %}
+  </nav>
+</header>

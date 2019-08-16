@@ -1,0 +1,30 @@
+<head>
+  <title>
+    {{ site.title }}{% if page.title %} – {{ page.title }}{% endif %}
+  </title>
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  {% if page.excerpt %}
+  <meta name="description" content="{{ page.excerpt | strip_html | truncate: 160 }}" />
+  {% else %}
+  <meta name="description" content="{{ site.description | truncate: 160 }}" />
+  {% endif %}
+  
+  {% capture styles %} {% include style.scss %} {% endcapture %}
+
+  <style>
+    {{ styles | scssify }}
+  </style>
+
+  <!-- <link
+      rel="stylesheet"
+      type="text/css"
+      href="{{ site.baseurl }}/style.css"
+    /> -->
+  <link
+    rel="alternate"
+    type="application/rss+xml"
+    title="{{ site.title }} - {{ site.description }}"
+    href="{{ site.baseurl }}/feed.xml"
+  />
+</head>

@@ -1,0 +1,63 @@
+#
+# This file contains configuration flags to customize your site
+#
+
+title: Max's blog
+
+description: On this technology blog, I post about the details I think are interesting about software, infrastructure, and my engineering adventures.
+
+# links:
+#   Blog: "/"
+#   About: "/About"
+
+permalink: pretty
+
+collections:
+  posts:
+    output: true
+    permalink: /posts/:categories/:year-:month-:day-:slug:output_ext
+
+# Exclude these files from your production _site
+exclude:
+  - Gemfile
+  - Gemfile.lock
+  - LICENSE
+  - CNAME
+
+#
+# !! You don't need to change any of the configuration flags below !!
+#
+
+highlighter: rouge
+markdown: kramdown
+kramdown:
+  input: GFM
+  math_engine: mathjax
+  syntax_highlighter: rouge
+
+future: true
+incremental: false
+
+sass:
+  style: :compressed # You might prefer to minify using :compressed
+
+titles_from_headings:
+  enabled:     true
+  strip_title: true
+  collections: true
+
+# Use the following plug-ins
+plugins:
+  - jekyll-coffeescript
+  - jekyll-gist
+  - jekyll-github-metadata
+  - jekyll-paginate
+  - jekyll-relative-links
+  - jekyll-optional-front-matter
+  - jekyll-readme-index
+  - jekyll-default-layout
+  - jekyll-titles-from-headings
+  - jekyll-seo-tag
+  - jemoji
+  - jekyll-sitemap # Create a sitemap using the official Jekyll sitemap gem
+  - jekyll-feed # Create an Atom feed using the official Jekyll feed gem

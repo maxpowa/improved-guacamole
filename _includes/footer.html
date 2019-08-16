@@ -1,0 +1,11 @@
+<div class="footer">
+  <footer>
+    <a href="#top" class="u-pull-left">top ^</a>
+    <div class="links">
+      <a href="/">home</a>
+      {% if site.links %} {% for link in site.links %}
+      <a href="{{ link[1] }}">{{ link[0] | downcase }}</a>
+      {% endfor %} {% endif %}
+    </div>
+  </footer>
+</div>
